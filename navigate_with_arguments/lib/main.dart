@@ -53,6 +53,19 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('Navigate to screen that extracts arguments'),
+          ),
+          ElevatedButton(
+            onPressed:() {
+              Navigator.pushNamed(
+                context,
+                PassArgumentsScreen.routeName,
+                arguments: ScreenArguments(
+                  'Accept Arguments Screen', 
+                  'This message is extracted in the onGenerateRoute function.',
+                )
+              );
+            },
+            child: Text('Navigate to a named that accepts arguments'),
           )
         ],
       ),
